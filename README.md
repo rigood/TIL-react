@@ -19,3 +19,7 @@
 - [shopping-cart](study/shopping-cart.md) : React, TypeScript, bootstrap, `useContext`, `useLocalStorage`
 
 - [Shorts](study/shorts.md) : Kyle이 알려준 각종 웹개발 꿀팁
+
+#### 2022. 10. 25. 화요일
+
+- [Intersection Observer API](practice/src/intersection-observer-api/README.md)
