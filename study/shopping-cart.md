@@ -93,7 +93,7 @@
     - App.tsx
     - main.tsx
   - App.tsx
-  - main.tsx
+  - ㅡain.tsx
   - index.html
 
     폴더 구조를 트리 형태로 나타내고 싶었는데, 이것도 참 쉽지 않다.  
@@ -112,3 +112,54 @@
     각종 custom hook은 hooks 폴더,  
     useContext 기능을 구현한 파일은 context 폴더에  
     함수들을 모아 놓은 파일은 utilities 폴더에 넣으면 된다.
+
+<br>
+
+- 파일, 컴포넌트 설명
+
+  - Main.tsx : 부트스트랩 import, BrowserRouter 설정
+  - App.tsx : Context Provier 설정, Navbar 배치, Router 설정
+
+  <br>
+
+  - Navbar.tsx : Navbar 디자인, 메뉴 Link 설정, 장바구니 버튼+수량 배지 디자인, 장바구니 클릭 이벤트 등록
+
+  <br>
+
+- sticky position
+
+  - 스크롤 하지 않을 때는 static position처럼 동작(부모 요소 내부에 존재)
+  - 스크롤 할 때는 fixed position처럼 동작(부모 요소와 레이어 분리)
+
+  <br>
+
+- 부트스트랩
+
+  - Container
+
+    - 부트스트랩에서 가장 기본적인 레이아웃 요소
+    - .container : 반응형 고정 너비 컨테이너(미디어쿼리에 따라 max-width 설정)
+    - .container-fluid : 항상 width: 100%
+    - .container-{breakpoint} : 분기점에 도달할 때까지 width 100%, 분기점 이후에는 미디어쿼리에 따라 고정된 너비를 가짐
+
+  - Button
+    - variant prop을 통해 다양한 스타일을 지정할 수 있음
+    - prop 값 앞에 접두사 outline- 을 붙이면 테두리만 있는 버튼
+
+<br>
+
+- Context
+
+  - React.createContext로 ShoppingCartContext 생성
+  - useContext를 반환하는 useShoppingCart 훅 생성
+  - ShoppingCartProvider 함수 안에 사용할 함수, 상태 생성
+
+    - isOpen state : 장바구니 창 오픈 여부를 나타내는 state, ShoppingCart 컴포넌트에 prop으로 전달
+    - openCart, closeCart 함수 : 장바구니 창을 열고 닫는 함수
+    - cartItems state : 장바구니 상품 목록 배열, useLoclStorage 훅을 사용하여 로컬스토리지에 저장
+    - cartQuantity : 장바구니 수량을 반환(cartItems state에 reduce 메서드를 이용하여 계산)
+
+    - getItemQuantity(id) : find 메서드를 이용하여 cartItems에 id와 일치하는 품목을 찾아내고 그 수량을 반환, 없으면 0 반환
+    - increaseCartQuantity(id) : 장바구니 수량 증가 / 현재 장바구니에 해당 상품이 없으면 상품을 추가하고, 상품이 있으면 수량을 1 증가시킨다.
+    - decreaseCartQuantity(id) : 장바구니 수량 감소 / 해당 상품 수량이 1이면 상품을 삭제하고, 아니면 수량을 1 감소시킨다.
+    - removeFromCart(id) : filter 메서드를 이용하여 해당 상품을 목록에서 삭제한다.
