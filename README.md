@@ -23,3 +23,7 @@
 #### 2022. 10. 25. 화요일
 
 - [Intersection Observer API](practice/src/intersection-observer-api/README.md)
+
+#### 2022. 11. 4. 금요일
+
+- [useReducer](practice/src/attendance/README.md)
