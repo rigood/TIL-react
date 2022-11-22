@@ -7,7 +7,7 @@
 - [search-filter](practice/src/search-filter/README.md) : `useState`, `useMemo`
 - [react-hook-mistakes](study/react-hook-mistakes.md) : `useState`, `useEffect`, `useMemo`
 - [pokemon-app](practice/src/pokemon-list/README.md) : `axios`, `pagination`
-- [book-search)](practice/src/book-search/README.md) : `axios`, `infinite scroll`, `useCallback`
+- [book-search](practice/src/book-search/README.md) : `axios`, `infinite scroll`, `useCallback`
 
 #### 2022. 10. 21. 금요일
 
