@@ -27,3 +27,7 @@
 #### 2022. 11. 4. 금요일
 
 - [useReducer](practice/src/attendance/README.md)
+
+#### 2022. 12. 5. 월요일
+
+- [Slider](practice/src/slider/README.md)
