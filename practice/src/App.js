@@ -5,8 +5,8 @@ import GlobalStyles from "./GlobalStyles";
 // import BookSearch from "./book-search/BookSearch";
 // import Attendance from "./attendance/Attendance";
 // import Bank from "./bank/Bank";
-// import Slider from "./slider/Slider";
-import InfiniteSlider from "./infinite-slider/InfiniteSlider";
+import Slider from "./slider/Slider";
+// import InfiniteSlider from "./infinite-slider/InfiniteSlider";
 
 export default function App() {
   return (
@@ -17,8 +17,8 @@ export default function App() {
       {/* <BookSearch /> */}
       {/* <Attendance /> */}
       {/* <Bank /> */}
-      {/* <Slider /> */}
-      <InfiniteSlider />
+      <Slider />
+      {/* <InfiniteSlider /> */}
     </>
   );
 }
