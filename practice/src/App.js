@@ -1,12 +1,13 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-// import SearchFilter from "./search-filter/SearchFilter";
-// import PokemonList from "./pokemon-list/PokemonList";
-// import BookSearch from "./book-search/BookSearch";
-// import Attendance from "./attendance/Attendance";
-// import Bank from "./bank/Bank";
+import SearchFilter from "./search-filter/SearchFilter";
+import PokemonList from "./pokemon-list/PokemonList";
+import BookSearch from "./book-search/BookSearch";
+import Attendance from "./attendance/Attendance";
+import Bank from "./bank/Bank";
 import Slider from "./slider/Slider";
-// import InfiniteSlider from "./infinite-slider/InfiniteSlider";
+import Slider2 from "./slider/Slider2";
+import InfiniteSlider from "./infinite-slider/InfiniteSlider";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
       {/* <BookSearch /> */}
       {/* <Attendance /> */}
       {/* <Bank /> */}
-      <Slider />
+      {/* <Slider2 /> */}
       {/* <InfiniteSlider /> */}
     </>
   );
