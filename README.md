@@ -1,33 +1,24 @@
-<bn>
+# 📂 Today I Learned (React)
 
-# Today I Learned
+#### React hook
 
-#### 2022. 10. 20. 목요일
-
+- [useRef](study/useRef.md)
+- [useMemo](study/useMemo.md)
+- [useReducer](practice/src/attendance/README.md)
 - [search-filter](practice/src/search-filter/README.md) : `useState`, `useMemo`
 - [react-hook-mistakes](study/react-hook-mistakes.md) : `useState`, `useEffect`, `useMemo`
-- [pokemon-app](practice/src/pokemon-list/README.md) : `axios`, `pagination`
-- [book-search](practice/src/book-search/README.md) : `axios`, `infinite scroll`, `useCallback`
 
-#### 2022. 10. 21. 금요일
-
-- [useMemo](study/useMemo.md)
-- [useRef](study/useRef.md)
-
-#### 2022. 10. 24. 월요일
-
-- [shopping-cart](study/shopping-cart.md) : React, TypeScript, bootstrap, `useContext`, `useLocalStorage`
-
-- [Shorts](study/shorts.md) : Kyle이 알려준 각종 웹개발 꿀팁
-
-#### 2022. 10. 25. 화요일
-
-- [Intersection Observer API](practice/src/intersection-observer-api/README.md)
-
-#### 2022. 11. 4. 금요일
-
-- [useReducer](practice/src/attendance/README.md)
-
-#### 2022. 12. 5. 월요일
+#### UI
 
 - [Slider](practice/src/slider/README.md)
+
+#### Practice
+
+- [pokemon-app 페이지네이션](practice/src/pokemon-list/README.md) : `axios`, `pagination`
+- [book-search 무한스크롤](practice/src/book-search/README.md) : `axios`, `infinite scroll`, `useCallback`
+- [Intersection Observer API 무한스크롤](practice/src/intersection-observer-api/README.md)
+- [shopping-cart](study/shopping-cart.md) : `TypeScript`, `bootstrap`, `useContext`, `useLocalStorage`
+
+#### Tip
+
+- [Shorts](study/shorts.md) : Web development Tip from Web Dev Simplified

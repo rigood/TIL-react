@@ -13,13 +13,23 @@ export default function App() {
   return (
     <>
       <GlobalStyles />
+      {/* useState, useMemo */}
       {/* <SearchFilter /> */}
-      {/* <PokemonList /> */}
-      {/* <BookSearch /> */}
+
+      {/* useReducer */}
       {/* <Attendance /> */}
       {/* <Bank /> */}
+
+      {/* 슬라이더 */}
+      {/* <Slider /> */}
       {/* <Slider2 /> */}
       {/* <InfiniteSlider /> */}
+
+      {/* 페이지네이션 */}
+      {/* <PokemonList /> */}
+
+      {/* 무한스크롤 */}
+      {/* <BookSearch /> */}
     </>
   );
 }

@@ -1,14 +1,14 @@
 export const data = [
   {
     id: 1,
-    img: "1.jpg",
+    img: "youngwoo.jpg",
   },
   {
     id: 2,
-    img: "2.jpg",
+    img: "junho.jpg",
   },
   {
     id: 3,
-    img: "3.jpg",
+    img: "suyeon.jpg",
   },
 ];
