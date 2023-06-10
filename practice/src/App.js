@@ -9,6 +9,7 @@ import Slider2 from "./slider/Slider2";
 import InfiniteSlider from "./infinite-slider/InfiniteSlider";
 import PostCode from "./postcode/PostCode";
 import FilterAnimation from "./filter-animation/FilterAnimation";
+import DragSlider from "./drag-slider/DragSlider";
 
 export default function App() {
   return (
@@ -33,7 +34,10 @@ export default function App() {
       {/* <BookSearch /> */}
 
       {/* 필터 애니메이션 */}
-      <FilterAnimation />
+      {/* <FilterAnimation /> */}
+
+      {/* 드래그 슬라이더 */}
+      <DragSlider />
     </>
   );
 }
