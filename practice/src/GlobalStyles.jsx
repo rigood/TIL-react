@@ -24,9 +24,9 @@ ${reset}
 
 body{
   font-family: 'Pretendard-Regular';
-  &::-webkit-scrollbar{
+  /* &::-webkit-scrollbar{
     display: none
-  }
+  } */
 }
 
 ul, li{

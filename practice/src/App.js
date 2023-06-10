@@ -1,4 +1,3 @@
-import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import SearchFilter from "./search-filter/SearchFilter";
 import PokemonList from "./pokemon-list/PokemonList";
@@ -8,6 +7,8 @@ import Bank from "./bank/Bank";
 import Slider from "./slider/Slider";
 import Slider2 from "./slider/Slider2";
 import InfiniteSlider from "./infinite-slider/InfiniteSlider";
+import PostCode from "./postcode/PostCode";
+import FilterAnimation from "./filter-animation/FilterAnimation";
 
 export default function App() {
   return (
@@ -30,6 +31,9 @@ export default function App() {
 
       {/* 무한스크롤 */}
       {/* <BookSearch /> */}
+
+      {/* 필터 애니메이션 */}
+      <FilterAnimation />
     </>
   );
 }
