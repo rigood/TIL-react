@@ -10,6 +10,10 @@ import InfiniteSlider from "./infinite-slider/InfiniteSlider";
 import PostCode from "./postcode/PostCode";
 import FilterAnimation from "./filter-animation/FilterAnimation";
 import DragSlider from "./drag-slider/DragSlider";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./vote/Layout";
+import MainPage from "./vote/pages/MainPage";
+import VotePage from "./vote/pages/VotePage";
 
 export default function App() {
   return (
@@ -37,7 +41,17 @@ export default function App() {
       {/* <FilterAnimation /> */}
 
       {/* 드래그 슬라이더 */}
-      <DragSlider />
+      {/* <DragSlider /> */}
+
+      {/* 투표 */}
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/:id" element={<VotePage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

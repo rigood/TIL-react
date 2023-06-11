@@ -18,8 +18,13 @@ ${reset}
     font-style: normal;
 }
 
+
 *{
     box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
 }
 
 body{
@@ -27,6 +32,7 @@ body{
   /* &::-webkit-scrollbar{
     display: none
   } */
+  background-color: 	#DCDCDC;
 }
 
 ul, li{
@@ -36,6 +42,10 @@ ul, li{
 a{
   text-decoration: none;
   color: inherit;
+}
+
+button{
+  padding: 0;
 }
 
 select{
