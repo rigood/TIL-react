@@ -16,6 +16,7 @@ import MainPage from "./vote/pages/MainPage";
 import VoteCreatePage from "./vote/pages/VoteCreatePage";
 import VoteListPage from "./vote/pages/VoteListPage";
 import VotingPage from "./vote/pages/VotingPage";
+import HashTag from "./HashTag/HashTag";
 
 export default function App() {
   return (
@@ -46,7 +47,7 @@ export default function App() {
       {/* <DragSlider /> */}
 
       {/* 투표 */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<MainPage />} />
@@ -55,7 +56,10 @@ export default function App() {
             <Route path="/:id" element={<VotingPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+
+      {/* 해쉬태그 */}
+      <HashTag />
     </>
   );
 }
