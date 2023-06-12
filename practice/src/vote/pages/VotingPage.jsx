@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styled, { css } from "styled-components";
-import SignModal from "../components/SignModal";
+import PageHeader from "../components/PageHeader";
+import Main from "../components/Main";
 import Option from "../components/Option";
+import SignModal from "../components/SignModal";
 
-function VotePage() {
+function VotingPage() {
   const {
     id,
     title,
@@ -26,13 +28,8 @@ function VotePage() {
   };
 
   return (
-    <Wrapper>
-      <Header>
-        <Link to={".."}>
-          <i className="fa-solid fa-chevron-left"></i>
-        </Link>
-        <h2>투표하기</h2>
-      </Header>
+    <>
+      <PageHeader pageTitle="투표하기" />
       <Main>
         <VoteTitle>{title}</VoteTitle>
         <VoteDesc>{desc}</VoteDesc>
@@ -56,47 +53,11 @@ function VotePage() {
       {isModalOpen && (
         <SignModal setIsModalOpen={setIsModalOpen} selected={selected} />
       )}
-    </Wrapper>
+    </>
   );
 }
 
-export default VotePage;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: max(5%, 10px) max(5%, 20px);
-`;
-
-const Header = styled.header`
-  display: flex;
-  align-items: center;
-
-  a {
-    width: 2.4rem;
-    height: 2.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    i {
-      font-size: 2rem;
-    }
-  }
-
-  h2 {
-    flex: 1;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 2.4rem;
-  }
-`;
-
-const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  padding: 40px 0 20px;
-`;
+export default VotingPage;
 
 const VoteTitle = styled.h3`
   font-size: 2.4rem;
@@ -130,7 +91,7 @@ const VoteBtn = styled.button.attrs({ type: "submit" })`
   ${(props) =>
     props.active &&
     css`
-      background-color: #1e3c84;
+      background-color: var(--primary);
       color: white;
     `}
 

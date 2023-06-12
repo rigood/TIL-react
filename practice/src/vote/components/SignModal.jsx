@@ -132,7 +132,7 @@ const VoteTitle = styled.h3`
 
   strong {
     font-weight: bold;
-    color: #1e3c84;
+    color: var(--primary);
   }
 `;
 

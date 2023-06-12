@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   }
 
   input:checked {
-    background-color: #1e3c84;
+    background-color: var(--primary);
   }
 
   input:before {

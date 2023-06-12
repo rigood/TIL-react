@@ -13,7 +13,9 @@ import DragSlider from "./drag-slider/DragSlider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./vote/Layout";
 import MainPage from "./vote/pages/MainPage";
-import VotePage from "./vote/pages/VotePage";
+import VoteCreatePage from "./vote/pages/VoteCreatePage";
+import VoteListPage from "./vote/pages/VoteListPage";
+import VotingPage from "./vote/pages/VotingPage";
 
 export default function App() {
   return (
@@ -48,7 +50,9 @@ export default function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<MainPage />} />
-            <Route path="/:id" element={<VotePage />} />
+            <Route path="/create" element={<VoteCreatePage />} />
+            <Route path="/list" element={<VoteListPage />} />
+            <Route path="/:id" element={<VotingPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

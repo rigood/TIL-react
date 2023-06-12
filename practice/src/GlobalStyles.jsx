@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import PretendardExtraBold from "./vote/assets/Pretendard-ExtraBold.subset.woff2";
 
 const GlobalStyles = createGlobalStyle`
 ${reset}
@@ -18,6 +19,14 @@ ${reset}
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Pretendard-ExtraBold';
+    src: url(${PretendardExtraBold}) format('woff');
+}
+
+:root{
+  --primary: #1e3c84;
+}
 
 *{
     box-sizing: border-box;
@@ -33,6 +42,7 @@ body{
     display: none
   } */
   background-color: 	#DCDCDC;
+  font-size: 1.6rem;
 }
 
 ul, li{
@@ -62,6 +72,13 @@ button{
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+}
+
+input{
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
 }
 `;
 

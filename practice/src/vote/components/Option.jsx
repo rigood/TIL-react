@@ -20,7 +20,7 @@ const Wrapper = styled.label`
   cursor: pointer;
 
   input[type="radio"] {
-    accent-color: #1e3c84;
+    accent-color: var(--primary);
     width: 1.6rem;
     height: 1.6rem;
     margin: 0;

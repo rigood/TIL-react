@@ -28,7 +28,7 @@ const Wrapper = styled.button.attrs({ type: "button" })`
   ${(props) =>
     props.active &&
     css`
-      background-color: #1e3c84;
+      background-color: var(--primary);
       color: white;
     `}
 `;
