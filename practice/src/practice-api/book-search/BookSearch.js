@@ -67,11 +67,11 @@ export default function BookSearch() {
         })}
       </BookList>
 
-      {!loading && !error && books.length === 0 && (
+      {!error && !loading && books.length === 0 && (
         <NoBook>검색 결과가 없습니다.</NoBook>
       )}
 
-      {loading && (
+      {!error && loading && (
         <StateIndicator>
           <img src={LoadingBar} alt="loading" />
         </StateIndicator>
@@ -93,6 +93,7 @@ const AppTitle = styled.h1`
 `;
 
 const StateIndicator = styled.div`
+  margin: 20px 0;
   text-align: center;
 
   img {
