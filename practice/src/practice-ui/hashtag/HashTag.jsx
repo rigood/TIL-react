@@ -38,6 +38,7 @@ function HashTag() {
     setHashTags((prev) =>
       [...prev].filter((hashTag) => hashTag !== selectedHashTag)
     );
+    inputRef.current.focus();
   };
 
   return (
@@ -60,6 +61,7 @@ function HashTag() {
         <HashTagInput
           autoFocus
           onKeyUp={addHashTag}
+          size={1}
           ref={inputRef}
         ></HashTagInput>
       </HashTagList>
@@ -104,7 +106,7 @@ const HashTagItem = styled.li`
   background-color: #fe8800;
   color: white;
   font-size: 14px;
-  word-break: keep-all;
+  word-break: break-word;
 
   i {
     font-size: 1.2rem;
