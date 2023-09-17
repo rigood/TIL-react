@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import PretendardExtraBold from "./vote/assets/Pretendard-ExtraBold.subset.woff2";
 
 const GlobalStyles = createGlobalStyle`
 ${reset}
@@ -19,14 +18,26 @@ ${reset}
     font-style: normal;
 }
 
+
 @font-face {
-    font-family: 'Pretendard-ExtraBold';
-    src: url(${PretendardExtraBold}) format('woff');
+    font-family: 'HANAMDAUM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/HANAMDAUM.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
 }
 
-:root{
-  --primary: #1e3c84;
+@font-face {
+    font-family: 'TTTtangsbudaejjigaeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
 }
+
+
+:root{
+
+}
+
 
 *{
     box-sizing: border-box;
@@ -38,11 +49,9 @@ html{
 
 body{
   font-family: 'Pretendard-Regular';
-  /* &::-webkit-scrollbar{
-    display: none
-  } */
-  background-color: 	#DCDCDC;
   font-size: 1.6rem;
+  line-height: 1.2;
+  color: #333;
 }
 
 ul, li{
@@ -68,7 +77,6 @@ select{
 button{
   background-color: transparent;
   border: none;
-  outline: none;
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;

@@ -1,65 +1,68 @@
 import GlobalStyles from "./GlobalStyles";
-import SearchFilter from "./search-filter/SearchFilter";
-import PokemonList from "./pokemon-list/PokemonList";
-import BookSearch from "./book-search/BookSearch";
-import Attendance from "./attendance/Attendance";
-import Bank from "./bank/Bank";
-import Slider from "./slider/Slider";
-import Slider2 from "./slider/Slider2";
-import InfiniteSlider from "./infinite-slider/InfiniteSlider";
-import PostCode from "./postcode/PostCode";
-import FilterAnimation from "./filter-animation/FilterAnimation";
-import DragSlider from "./drag-slider/DragSlider";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./vote/Layout";
-import MainPage from "./vote/pages/MainPage";
-import VoteCreatePage from "./vote/pages/VoteCreatePage";
-import VoteListPage from "./vote/pages/VoteListPage";
-import VotingPage from "./vote/pages/VotingPage";
-import HashTag from "./HashTag/HashTag";
+
+// useMemo 연습
+import SearchFilter from "./practice-hooks/useMemo/search-filter/SearchFilter";
+
+// useReducer 연습
+import Attendance from "./practice-hooks/useReducer/attendance/Attendance";
+import Bank from "./practice-hooks/useReducer/bank/Bank";
+
+// API 활용
+import MovieSearch from "./practice-api/movie-search/MovieSearch";
+import BookSearch from "./practice-api/book-search/BookSearch";
+import Pokemons from "./practice-api/pokemon/Pokemons";
+
+// 슬라이더 구현
+import Slider from "./practice-ui/slider/Slider";
+import Slider2 from "./practice-ui/slider/Slider2";
+import InfiniteSlider from "./practice-ui/slider/InfiniteSlider";
+import DragSlider from "./practice-ui/slider/DragSlider";
+
+// UI 연습
+import HashTag from "./practice-ui/hashtag/HashTag";
+import Accordion from "./practice-ui/accordion/Accordion";
+import FilterAnimation from "./practice-ui/filter-animation/FilterAnimation";
+import Parallax from "./practice-ui/parallax/Parallax";
 
 export default function App() {
   return (
     <>
       <GlobalStyles />
-      {/* useState, useMemo */}
+      {/* useMemo 연습*/}
       {/* <SearchFilter /> */}
 
-      {/* useReducer */}
+      {/* useReducer 연습*/}
       {/* <Attendance /> */}
       {/* <Bank /> */}
+
+      {/* API 활용 */}
+
+      {/* axios, useInfiniteQuery, Intersection Observer API 무한스크롤*/}
+      {/* <MovieSearch /> */}
+
+      {/* axios, useState, Intersection Observer API 무한스크롤*/}
+      {/* <BookSearch /> */}
+
+      {/* axios, useState, 페이지네이션 */}
+      {/* <Pokemons /> */}
 
       {/* 슬라이더 */}
       {/* <Slider /> */}
       {/* <Slider2 /> */}
       {/* <InfiniteSlider /> */}
-
-      {/* 페이지네이션 */}
-      {/* <PokemonList /> */}
-
-      {/* 무한스크롤 */}
-      {/* <BookSearch /> */}
-
-      {/* 필터 애니메이션 */}
-      {/* <FilterAnimation /> */}
-
-      {/* 드래그 슬라이더 */}
       {/* <DragSlider /> */}
 
-      {/* 투표 */}
-      {/* <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/create" element={<VoteCreatePage />} />
-            <Route path="/list" element={<VoteListPage />} />
-            <Route path="/:id" element={<VotingPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter> */}
-
       {/* 해쉬태그 */}
-      <HashTag />
+      {/* <HashTag /> */}
+
+      {/* 아코디언 메뉴*/}
+      {/* <Accordion /> */}
+
+      {/* 영화 목록 필터 애니메이션 */}
+      {/* <FilterAnimation /> */}
+
+      {/* 패러렉스 */}
+      {/* <Parallax /> */}
     </>
   );
 }
