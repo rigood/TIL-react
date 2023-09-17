@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/TIL-react/practice/static/js/main.f167c5d4.js",
+    "static/media/1.jpg": "/TIL-react/practice/static/media/1.43fd52188a08ff6e51a4.jpg",
+    "static/media/6.jpg": "/TIL-react/practice/static/media/6.add0762fd32c076c49ac.jpg",
+    "static/media/3.jpg": "/TIL-react/practice/static/media/3.fa63d44f7f64a776f052.jpg",
+    "static/media/4.jpg": "/TIL-react/practice/static/media/4.c04786dcafbf03e5acc2.jpg",
+    "static/media/5.jpg": "/TIL-react/practice/static/media/5.a94ab9b88d2d3d50b630.jpg",
+    "static/media/2.jpg": "/TIL-react/practice/static/media/2.0e620bb4c56c0f0fbafd.jpg",
+    "static/media/7.jpg": "/TIL-react/practice/static/media/7.7a8be8332b76ebf412fd.jpg",
+    "static/media/backgroundImage.jpg": "/TIL-react/practice/static/media/backgroundImage.4b5d59be7e6313862863.jpg",
+    "static/media/loadingBar.gif": "/TIL-react/practice/static/media/loadingBar.a8b8eabb26a11f3f37b6.gif",
+    "index.html": "/TIL-react/practice/index.html",
+    "main.f167c5d4.js.map": "/TIL-react/practice/static/js/main.f167c5d4.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f167c5d4.js"
+  ]
+}
