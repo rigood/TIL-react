@@ -63,7 +63,7 @@ export default Slider;
 const Container = styled.div`
   width: 400px;
   height: 400px;
-  margin: 200px auto;
+  margin: 200px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;

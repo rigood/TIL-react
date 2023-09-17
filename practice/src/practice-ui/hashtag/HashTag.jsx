@@ -103,6 +103,7 @@ const HashTagItem = styled.li`
   border-radius: 16px;
   background-color: #fe8800;
   color: white;
+  font-size: 14px;
   word-break: keep-all;
 
   i {
@@ -114,5 +115,6 @@ const HashTagItem = styled.li`
 
 const HashTagInput = styled.input.attrs({ type: "text" })`
   flex: 1;
-  padding: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
 `;

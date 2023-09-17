@@ -54,8 +54,8 @@ function InfiniteSlider() {
             transition: `${transition}`,
           }}
         >
-          {newArray.map((item) => (
-            <Slide key={item.id}>
+          {newArray.map((item, index) => (
+            <Slide key={item.id + "/" + index}>
               <img
                 src={process.env.PUBLIC_URL + `/img/slider/${item.img}`}
                 alt={item.name}

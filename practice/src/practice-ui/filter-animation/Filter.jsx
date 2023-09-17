@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styled, { css } from "styled-components";
 
 const genreList = {
@@ -24,37 +23,26 @@ const genreList = {
 };
 
 function Filter({
-  genres,
-  activeGenre,
-  setActiveGenre,
-  setFilteredMovies,
-  popularMovies,
+  genreIndexs,
+  activeGenreIndex,
+  setActiveGenreIndex,
+  allMoviesIndex,
 }) {
-  useEffect(() => {
-    if (activeGenre === 0) {
-      setFilteredMovies(popularMovies);
-      return;
-    }
-
-    const filtered = popularMovies.filter((movie) =>
-      movie.genre_ids.includes(activeGenre)
-    );
-
-    setFilteredMovies(filtered);
-  }, [activeGenre]);
-
   return (
     <Wrapper>
-      <Button active={activeGenre === 0} onClick={() => setActiveGenre(0)}>
+      <Button
+        active={activeGenreIndex === allMoviesIndex}
+        onClick={() => setActiveGenreIndex(allMoviesIndex)}
+      >
         All
       </Button>
-      {genres?.map((genre) => (
+      {genreIndexs?.map((genreIndex) => (
         <Button
-          key={genre}
-          active={activeGenre === genre}
-          onClick={() => setActiveGenre(genre)}
+          key={genreIndex}
+          active={activeGenreIndex === genreIndex}
+          onClick={() => setActiveGenreIndex(genreIndex)}
         >
-          {genreList[genre]}
+          {genreList[genreIndex]}
         </Button>
       ))}
     </Wrapper>

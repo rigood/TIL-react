@@ -6,7 +6,6 @@ function Parallax() {
   const [position, setPosition] = useState(0);
 
   function onScroll() {
-    console.log(window.scrollY);
     setPosition(window.scrollY);
   }
 
@@ -78,6 +77,6 @@ const Message = styled.div`
   align-self: flex-end;
   text-align: end;
   font-size: 5rem;
-  margin: 50px 0px 100px;
+  margin: 50px 20px 100px;
   transform: translateX(${({ position }) => -position + "px"});
 `;

@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+function getPosterPath(path) {
+  if (!path) return "";
+  return `https://image.tmdb.org/t/p/w500/${path}`;
+}
+
 function Moive({ movie }) {
+  const { title, poster_path } = movie;
+
   return (
     <Wrapper
       layout
@@ -10,11 +17,8 @@ function Moive({ movie }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <h2>{movie.title}</h2>
-      <img
-        src={`https://image.tmdb.org/t/p/w500` + movie.backdrop_path}
-        alt={movie.title}
-      ></img>
+      <h2>{title}</h2>
+      <Poster imgUrl={getPosterPath(poster_path)} alt={movie.title}></Poster>
     </Wrapper>
   );
 }
@@ -26,20 +30,22 @@ const Wrapper = styled(motion.div)`
   flex-direction: column;
 
   h2 {
-    font-size: 1rem;
+    padding: 0 5px;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 1rem;
     letter-spacing: -0.5px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-bottom: 10px;
   }
+`;
 
-  img {
-    width: 100%;
-    height: 45vh;
-    object-fit: cover;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-  }
+const Poster = styled.div`
+  aspect-ratio: 2 / 3;
+  border-radius: 10px;
+  background-color: lightgray;
+  background-image: url(${({ imgUrl }) => imgUrl});
+  background-size: cover;
+  margin-bottom: 10px;
 `;

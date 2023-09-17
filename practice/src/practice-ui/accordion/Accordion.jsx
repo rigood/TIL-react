@@ -41,7 +41,8 @@ function Accordion() {
 export default Accordion;
 
 const Wrapper = styled.div`
-  width: 768px;
+  width: 100%;
+  max-width: 768px;
   margin: 0 auto;
   margin-top: 100px;
   display: flex;
@@ -75,6 +76,7 @@ const Header = styled.button`
   padding-bottom: 2.4rem;
   border-bottom: ${({ active }) => !active && "1px solid #e9ecef"};
   color: ${({ active }) => active && "crimson"};
+  font-weight: ${({ active }) => active && "bold"};
 `;
 
 const Question = styled.h5`
@@ -89,7 +91,6 @@ const FoldBtn = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ active }) => (active ? "crimson" : "#999")};
 
   i {
     font-size: 1.8rem;

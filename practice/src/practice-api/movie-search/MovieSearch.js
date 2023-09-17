@@ -2,8 +2,10 @@ import axios from "axios";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useInfiniteQuery } from "react-query";
 import styled from "styled-components";
+import LoadingBar from "./loadingBar.gif";
 
 const API_KEY = process.env.REACT_APP_MOVIEDB_API_KEY;
+
 const db = axios.create({
   baseURL: "https://api.themoviedb.org/3",
   params: {
@@ -15,7 +17,6 @@ const db = axios.create({
 
 function getPosterPath(path) {
   if (!path) return "";
-
   return `https://image.tmdb.org/t/p/w500/${path}`;
 }
 
@@ -36,6 +37,7 @@ function Main() {
   const {
     data: movieData,
     isLoading,
+    isError,
     fetchNextPage,
     hasNextPage,
   } = useInfiniteQuery(
@@ -51,8 +53,6 @@ function Main() {
         lastPage.data.page + 1,
     }
   );
-
-  console.log(isLoading, movieData);
 
   const inputRef = useRef();
 
@@ -106,7 +106,14 @@ function Main() {
         <Button type="submit">검색</Button>
       </Form>
 
-      {!isLoading && (
+      {isError && <StateIndicator>에러가 발생했습니다.</StateIndicator>}
+      {isLoading && (
+        <StateIndicator>
+          <img src={LoadingBar} alt="" />
+        </StateIndicator>
+      )}
+
+      {!isLoading && !isError && (
         <MovieCount>
           {movieData?.count === 0
             ? "검색 결과가 없습니다."
@@ -181,6 +188,15 @@ const MovieCount = styled.div`
   margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
+`;
+
+const StateIndicator = styled.div`
+  margin-bottom: 20px;
+  text-align: center;
+
+  img {
+    width: 50px;
+  }
 `;
 
 const MovieList = styled.ul`

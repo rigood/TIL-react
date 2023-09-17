@@ -38,7 +38,7 @@ function Pokemons() {
 
   return (
     <Wrapper>
-      <AppTitle>🐣 포켓몬 목록</AppTitle>
+      <AppTitle>포켓몬 목록</AppTitle>
 
       <PokemonList>
         {pokemons.map((pokemon, index) => (

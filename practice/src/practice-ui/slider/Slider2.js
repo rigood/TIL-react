@@ -52,7 +52,7 @@ export default Slider2;
 const Container = styled.div`
   width: 200px;
   height: 200px;
-  margin: 100px auto;
+  margin: 200px auto 0;
   overflow: hidden;
   position: relative;
 `;

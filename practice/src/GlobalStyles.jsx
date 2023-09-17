@@ -52,6 +52,7 @@ body{
   font-size: 1.6rem;
   line-height: 1.2;
   color: #333;
+  min-width: 1024px;
 }
 
 ul, li{
