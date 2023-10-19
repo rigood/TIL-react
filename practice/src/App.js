@@ -26,6 +26,7 @@ import Accordion from "./practice-ui/accordion/Accordion";
 import FilterAnimation from "./practice-ui/filter-animation/FilterAnimation";
 import Parallax from "./practice-ui/parallax/Parallax";
 import NavScroll from "./practice-ui/nav-scroll/NavScroll";
+import VoteApp from "./practice-ui/vote/VoteApp";
 
 const tabs = [
   {
@@ -103,6 +104,11 @@ const tabs = [
     tags: ["react-scroll"],
     component: <NavScroll />,
   },
+  {
+    title: "투표 및 전자서명",
+    tags: ["Canvas API", "모달", "localStorage", "useImperativeHandle"],
+    component: <VoteApp />,
+  },
 ];
 
 const LOCALSTORAGE_KEY = "rigood_TIL_react_tabIndex";
@@ -130,8 +136,11 @@ export default function App() {
             >
               <span>{tab.title}</span>
               <TagList>
-                {tab.tags.map((tag) => (
-                  <Tag key={tag}>{tag}</Tag>
+                {tab.tags.map((tag, index) => (
+                  <Tag key={tag}>
+                    {tag}
+                    {index + 1 !== tab.tags.length && ","}
+                  </Tag>
                 ))}
               </TagList>
             </Tab>
@@ -188,6 +197,7 @@ const Wrapper = styled.div`
 
 const TagList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 `;
 
