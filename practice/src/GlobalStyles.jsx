@@ -87,12 +87,14 @@ button{
   cursor: pointer;
 }
 
-input{
+input, textarea{
   border: none;
   outline: none;
   font-family: inherit;
   font-size: inherit;
 }
+
+
 `;
 
 export default GlobalStyles;

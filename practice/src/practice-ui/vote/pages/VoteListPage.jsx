@@ -5,21 +5,26 @@ import PageHeader from "../components/commons/PageHeader";
 import ToggleSwitch from "../components/vote_list_page/ToggleSwitch";
 import Main from "../components/commons/Main";
 import VoteItem from "../components/vote_list_page/VoteItem";
-import { LOCALSTORAGE_KEY, MY_ID } from "../constants";
+import { MY_ID } from "../constants";
+import { getLocalStorage, setLocalStorage } from "../utils/utils";
 
 function VoteListPage() {
   const [isFiltered, setIsFiltered] = useState(false);
 
-  const savedVoteList = localStorage.getItem(LOCALSTORAGE_KEY);
+  const voteList = getLocalStorage();
 
-  if (!savedVoteList) {
-    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(initialVoteList));
+  if (!voteList) {
+    setLocalStorage(initialVoteList);
   }
 
-  const voteList = JSON.parse(savedVoteList);
-
-  const getIsVoteOpen = (vote) => {
-    return Date.now() >= vote.startDate && Date.now() < vote.endDate;
+  const getVoteStatus = (vote) => {
+    if (Date.now() < vote.startDate) {
+      return "예정";
+    } else if (Date.now() < vote.endDate) {
+      return "진행중";
+    } else {
+      return "종료";
+    }
   };
 
   const getIsVoteDone = (vote) => {
@@ -27,8 +32,19 @@ function VoteListPage() {
   };
 
   const filteredVotes = isFiltered
-    ? voteList.filter((vote) => getIsVoteOpen(vote) && !getIsVoteDone(vote))
+    ? voteList.filter(
+        (vote) => getVoteStatus(vote) === "진행중" && !getIsVoteDone(vote)
+      )
     : voteList;
+
+  const statusOrder = ["진행중", "예정", "종료"];
+
+  const sortByStatusOrder = (a, b) => {
+    return (
+      statusOrder.indexOf(getVoteStatus(a)) -
+      statusOrder.indexOf(getVoteStatus(b))
+    );
+  };
 
   return (
     <>
@@ -40,11 +56,11 @@ function VoteListPage() {
       </PageHeader>
       <Main>
         <VoteList>
-          {filteredVotes.map((vote) => (
+          {filteredVotes.sort(sortByStatusOrder).map((vote) => (
             <VoteItem
               key={vote.id}
               vote={vote}
-              isOpen={getIsVoteOpen(vote)}
+              voteStatus={getVoteStatus(vote)}
               isDone={getIsVoteDone(vote)}
             />
           ))}

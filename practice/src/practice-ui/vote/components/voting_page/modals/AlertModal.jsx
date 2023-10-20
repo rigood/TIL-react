@@ -3,7 +3,7 @@ import styled from "styled-components";
 const AlertModal = () => {
   return (
     <>
-      <Message>이미 참여하거나 종료된 투표입니다.</Message>
+      <Message>이미 참여하거나 종료(또는 미오픈) 투표입니다.</Message>
     </>
   );
 };

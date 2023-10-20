@@ -2,11 +2,10 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { calculateVotingRate, formatDate } from "../../utils/utils";
 
-function VoteItem({ vote, isOpen, isDone }) {
+function VoteItem({ vote, voteStatus, isDone }) {
   const { id, title, startDate, endDate, votedUserIds } = vote;
 
   const voteDone = isDone ? "투표완료" : "미투표";
-  const voteOpen = isOpen ? "진행중" : "종료";
 
   const votingRate = calculateVotingRate(votedUserIds.length);
 
@@ -16,14 +15,14 @@ function VoteItem({ vote, isOpen, isDone }) {
     <Wrapper
       onClick={() =>
         navigate(`/${id}`, {
-          state: { vote, isVoteDisabled: isDone || !isOpen },
+          state: { vote, isVoteDisabled: isDone || voteStatus !== "진행중" },
         })
       }
     >
       <VoteDone active={!isDone}>{voteDone}</VoteDone>
       <Title>{title}</Title>
       <Row>
-        <VoteOpen>({voteOpen})</VoteOpen>
+        <VoteOpen>({voteStatus})</VoteOpen>
         <Period>
           {formatDate(startDate)} ~ {formatDate(endDate)}
         </Period>

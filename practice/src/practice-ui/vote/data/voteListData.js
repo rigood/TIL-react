@@ -1,8 +1,4 @@
-const now = new Date();
-
-function addOrSubtractDate(number) {
-  return new Date(now).setDate(now.getDate() + number);
-}
+import { addOrSubtractDate } from "../utils/utils";
 
 const voteList = [
   {

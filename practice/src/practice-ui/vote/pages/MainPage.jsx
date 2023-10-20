@@ -31,7 +31,6 @@ const SubTitle = styled.h2`
 `;
 
 const Title = styled.h1`
-  font-family: "Pretendard-ExtraBold";
   font-size: 4.8rem;
   font-weight: bold;
 `;
