@@ -40,6 +40,7 @@ ${reset}
   --white:  #f1f3f5;
   --toggleSwitchBackground: #c6c6c6;
   --mainPagePrimary: #4b72cb;
+ 
 }
 
 
@@ -49,6 +50,7 @@ ${reset}
 
 html{
   font-size: 62.5%;
+
 }
 
 body{
@@ -57,6 +59,7 @@ body{
   line-height: 1.2;
   color: #333;
   min-width: 1024px;
+
 }
 
 ul, li{
