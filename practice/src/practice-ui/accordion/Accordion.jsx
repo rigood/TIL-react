@@ -51,7 +51,6 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: "Pretendard-ExtraBold";
   font-size: 4rem;
   margin-bottom: 6rem;
 `;
@@ -80,7 +79,6 @@ const Header = styled.button`
 `;
 
 const Question = styled.h5`
-  font-family: "Pretendard-ExtraBold";
   font-size: 2.4rem;
   line-height: 2.4rem;
 `;
