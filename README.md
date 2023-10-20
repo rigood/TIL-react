@@ -23,9 +23,12 @@
 - [NavBar 스크롤](practice/src/practice-ui/nav-scroll/NavScroll.jsx)
 
 - 온라인 전자 투표
+
   - [투표 개설](practice/src/practice-ui/vote/pages/VoteCreatePage.jsx)
   - [투표 진행상태에 따라 정렬](practice/src/practice-ui/vote/pages/VoteListPage.jsx)
   - [Canvas API를 이용한 전자서명](practice/src/practice-ui/vote/components/voting_page/SignPad.jsx)
+
+- [칸반보드](practice/src/practice-ui/kanban/Kanban.jsx)
 
 #### Hooks 연습
 

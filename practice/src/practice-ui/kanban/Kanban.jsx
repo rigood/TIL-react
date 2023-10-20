@@ -3,34 +3,7 @@ import { useRecoilState } from "recoil";
 import { todoAtom } from "./recoil";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Board from "./components/Board";
-
-function getdayColor(boardId) {
-  switch (boardId) {
-    case "MON":
-    case "mon":
-      return "#E61A73";
-    case "TUE":
-    case "tue":
-      return "#EDAE13";
-    case "WED":
-    case "wed":
-      return "#0BBAB3";
-    case "THU":
-    case "thu":
-      return "#0764A1";
-    case "FRI":
-    case "fri":
-      return "#25A2DA";
-    case "SAT":
-    case "sat":
-      return "#8146C4";
-    case "SUN":
-    case "sun":
-      return "#E97EC2";
-    default:
-      return "#B1A79B";
-  }
-}
+import { getdayColor } from "./utils";
 
 function Kanban() {
   const [todos, setTodos] = useRecoilState(todoAtom);
@@ -112,6 +85,11 @@ function Kanban() {
 
   return (
     <Wrapper>
+      <Header>
+        <CreateBoardBtn onClick={createBoard}>
+          <i className="fa fa-plus"></i>
+        </CreateBoardBtn>
+      </Header>
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="board" type="board" direction="horizontal">
           {(provided, snapshot) => (
@@ -143,9 +121,6 @@ function Kanban() {
           )}
         </Droppable>
       </DragDropContext>
-      <CreateBoardBtn onClick={createBoard}>
-        <i className="fa fa-plus"></i>
-      </CreateBoardBtn>
     </Wrapper>
   );
 }
@@ -158,16 +133,14 @@ const Wrapper = styled.div`
   background-color: #f2f1ed;
 `;
 
-const BoardsWrapper = styled.div`
+const Header = styled.header`
   display: flex;
   justify-content: center;
-  padding: 4rem 2rem 2rem;
+  align-items: center;
+  padding: 3rem 0 1rem;
 `;
 
 const CreateBoardBtn = styled.div`
-  position: fixed;
-  top: 3rem;
-  right: 4rem;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -181,4 +154,10 @@ const CreateBoardBtn = styled.div`
   i {
     font-size: 2.4rem;
   }
+`;
+
+const BoardsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 `;
