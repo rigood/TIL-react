@@ -97,19 +97,3 @@ const VoteOptions = styled.form`
   flex-direction: column;
   row-gap: 1.5rem;
 `;
-
-const VoteBtn = styled.button.attrs({ type: "submit" })`
-  width: 100%;
-  padding: 2rem;
-  margin: 20px 0;
-  border-radius: 0.5rem;
-  background-color: var(--primary);
-  color: white;
-  font-size: 1.8rem;
-  line-height: 1.8rem;
-
-  &:disabled {
-    cursor: not-allowed;
-    background-color: var(--white);
-  }
-`;
