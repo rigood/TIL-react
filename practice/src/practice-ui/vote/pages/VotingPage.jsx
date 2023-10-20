@@ -35,7 +35,7 @@ function VotingPage() {
         <VoteTitle>{title}</VoteTitle>
         <VoteDesc>{desc}</VoteDesc>
         <VoteOptions onSubmit={handleSubmit}>
-          {options.sort().map((option, index) => (
+          {options.map((option, index) => (
             <Option
               key={option}
               option={option}
