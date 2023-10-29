@@ -20,7 +20,6 @@
 - [패럴랙스](practice/src/practice-ui/parallax/Parallax.jsx) : scrollY 값을 감지하여 backgroundPositionY, translateX 조절
 - [아코디언 메뉴](practice/src/practice-ui/accordion/Accordion.jsx)
 - [해쉬태그](practice/src/practice-ui/hashtag/HashTag.jsx)
-- [NavBar 스크롤](practice/src/practice-ui/nav-scroll/NavScroll.jsx)
 
 - 온라인 전자 투표
 
