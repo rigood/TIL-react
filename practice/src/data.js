@@ -21,7 +21,6 @@ import HashTag from "./practice-ui/hashtag/HashTag";
 import Accordion from "./practice-ui/accordion/Accordion";
 import FilterAnimation from "./practice-ui/filter-animation/FilterAnimation";
 import Parallax from "./practice-ui/parallax/Parallax";
-import NavScroll from "./practice-ui/nav-scroll/NavScroll";
 import VoteApp from "./practice-ui/vote/VoteApp";
 import Kanban from "./practice-ui/kanban/Kanban";
 
@@ -95,11 +94,6 @@ const tabs = [
     title: "영화 필터링 애니메이션",
     tags: ["framer-motion", "fetch"],
     component: <FilterAnimation />,
-  },
-  {
-    title: "NavBar 스크롤 이동",
-    tags: ["react-scroll"],
-    component: <NavScroll />,
   },
   {
     title: "투표 및 전자서명",
