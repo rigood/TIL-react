@@ -11,7 +11,7 @@ import { getLocalStorage, setLocalStorage } from "../utils/utils";
 function VoteListPage() {
   const [isFiltered, setIsFiltered] = useState(false);
 
-  const voteList = getLocalStorage();
+  const voteList = getLocalStorage() || initialVoteList;
 
   if (!voteList) {
     setLocalStorage(initialVoteList);
